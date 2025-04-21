@@ -1,0 +1,43 @@
+<div
+  class="bg-white rounded-lg shadow-md p-4 mb-4 hover:shadow-lg transition-shadow duration-300"
+  [class.border-l-4]="true"
+  [class.border-pastel-green]="task.completed"
+  [class.border-pastel-pink]="!task.completed"
+>
+  <div class="flex justify-between items-start">
+    <div>
+      <h3 class="text-lg font-semibold text-gray-700">{{ task.title }}</h3>
+      <p class="text-gray-500 mt-1">{{ task.description }}</p>
+    </div>
+    <div class="flex items-center space-x-2">
+      <span
+        class="px-2 py-1 text-xs rounded-full"
+        [ngClass]="{
+          'bg-pastel-green text-gray-700': task.difficulty === 'facile',
+          'bg-pastel-yellow text-gray-700': task.difficulty === 'moyen',
+          'bg-pastel-red text-gray-700': task.difficulty === 'difficile'
+        }"
+      >
+        {{ task.difficulty }}
+      </span>
+      <span class="text-sm text-gray-500">
+        {{ task.experiencePoints }} XP
+      </span>
+    </div>
+  </div>
+  <div class="mt-4 flex justify-between items-center">
+    <span class="text-sm text-gray-400">
+      {{ task.dueDate | date : "shortDate" }}
+    </span>
+    <button
+      (click)="toggleComplete()"
+      class="px-3 py-1 rounded text-sm transition-colors duration-200"
+      [ngClass]="{
+        'bg-pastel-green text-gray-700 hover:bg-pastel-mint': !task.completed,
+        'bg-pastel-lavender text-gray-700': task.completed
+      }"
+    >
+      {{ task.completed ? "Terminée" : "Terminer" }}
+    </button>
+  </div>
+</div>

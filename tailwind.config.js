@@ -1,0 +1,35 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,ts}"],
+  theme: {
+    extend: {
+      colors: {
+        "pastel-green": "#A8E6CF",
+        "pastel-mint": "#DCEDC1",
+        "pastel-lavender": "#D4A5A5",
+        "pastel-pink": "#FFD3B6",
+        "pastel-yellow": "#FFEAAE",
+        "pastel-blue": "#B5EAD7",
+        "pastel-purple": "#C7CEEA",
+        "pastel-orange": "#FFB7B2",
+        "pastel-red": "#FF9AA2",
+        "pastel-teal": "#B5EAD7",
+        "pastel-gray": "#E2E2E2",
+        "pastel-indigo": "#C7CEEA",
+        "pastel-rose": "#FFB7B2",
+        "pastel-cyan": "#B5EAD7",
+        "pastel-lime": "#DCEDC1",
+        "pastel-amber": "#FFEAAE",
+        "pastel-emerald": "#A8E6CF",
+        "pastel-sky": "#B5EAD7",
+        "pastel-violet": "#C7CEEA",
+        "pastel-fuchsia": "#FF9AA2",
+        "pastel-slate": "#E2E2E2",
+        "pastel-zinc": "#E2E2E2",
+        "pastel-neutral": "#E2E2E2",
+        "pastel-stone": "#E2E2E2",
+      },
+    },
+  },
+  plugins: [],
+};
