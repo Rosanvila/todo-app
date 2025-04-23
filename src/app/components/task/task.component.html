@@ -37,7 +37,9 @@
         'bg-pastel-lavender text-gray-700': task.completed
       }"
     >
-      {{ task.completed ? "Terminée" : "Terminer" }}
+      {{
+        task.completed ? "Tâche terminée" : "Marquer comme terminée"
+      }}
     </button>
   </div>
 </div>

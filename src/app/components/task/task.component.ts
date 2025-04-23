@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Task } from '../../models/task.model';
 
@@ -10,8 +10,10 @@ import { Task } from '../../models/task.model';
 })
 export class TaskComponent {
   @Input() task!: Task;
+  @Output() taskUpdated = new EventEmitter<Task>();
 
   toggleComplete() {
     this.task.completed = !this.task.completed;
+    this.taskUpdated.emit(this.task);
   }
 } 
