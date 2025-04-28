@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { TaskListComponent } from './components/task-list/task-list.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, TaskListComponent],
-  templateUrl: './app.component.html',
-  styles: []
+  imports: [RouterOutlet],
+  template: `
+    <div class="min-h-screen bg-pastel-grey">
+      <router-outlet></router-outlet>
+    </div>
+  `
 })
 export class AppComponent {
   title = 'todo-app';
